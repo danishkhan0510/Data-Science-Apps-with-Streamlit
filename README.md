@@ -26,3 +26,9 @@ Packages used - Pandas, StreamLit, Matplotlib, Seaborn, base64, yfinance.
 Data source - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies  
 First we scrape the table containing information of all S&P companies from the above website. We create a sidebar to select the sector of choice and also the number of companies we would want to visualize. We create a function to directly download the csv file from the web application itself. We use yfinance to download stock price information of companies. Use this link to look at the documentation of yfinance https://pypi.org/project/yfinance/
 We create a custom function to plot the closing price(I used closing price but you can use any other column of choice) of one company.
+
+## Project 4
+### Iris Flower Classification
+Packages used - Pandas, StreamLit, Sklearn.  
+Iris flower data is a very popular dataset implicitly available in sklearn. It has the sepal length, sepal width, petal length, petal width as the independent features. It is  classification problem where we have to essentially predict which type of an iris plant it is i.e. Setosa, Verginica or Versicolor.  
+We start by creating a custom function to input all the 4 independent features from the user. We also print the feature values given by the user. We load the datset and seperate the independent and dependent features. We then use the Random Forest classifier for prediction. We get the prediction for our set of independent features and also the probabilities for each class. Finally we print the class labels, our prediction and the prediction probabilities.
