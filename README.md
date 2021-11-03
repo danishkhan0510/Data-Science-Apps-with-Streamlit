@@ -30,5 +30,15 @@ We create a custom function to plot the closing price(I used closing price but y
 ## Project 4
 ### Iris Flower Classification
 Packages used - Pandas, StreamLit, Sklearn.  
-Iris flower data is a very popular dataset implicitly available in sklearn. It has the sepal length, sepal width, petal length, petal width as the independent features. It is  classification problem where we have to essentially predict which type of an iris plant it is i.e. Setosa, Verginica or Versicolor.  
+Data Set - Iris flower data is a very popular dataset implicitly available in sklearn. It has the sepal length, sepal width, petal length, petal width as the independent features. It is  classification problem where we have to essentially predict which type of an iris plant it is i.e. Setosa, Verginica or Versicolor.  
 We start by creating a custom function to input all the 4 independent features from the user. We also print the feature values given by the user. We load the datset and seperate the independent and dependent features. We then use the Random Forest classifier for prediction. We get the prediction for our set of independent features and also the probabilities for each class. Finally we print the class labels, our prediction and the prediction probabilities.
+
+## Project 5
+### Palmer Penguins Classification
+Packages used - Pandas, StreamLit, Sklearn, pickle. 
+Data Set - We shall be using the palmer penguins dataset, the goal of which is to provide a great alternative to the iris dataset for data exploration & visualization. The independent features are island, bill length, bill depth, flipper length, body mass and sex. The dependent feature is species. I have uploaded a clean version(missing values removed) of the dataset within the folder for you to use directly.  
+We have 2 files and I will talk about each one of them one by one.  
+penguins-model-building.py  
+This is the file where we are building the model. Our first step would be to encode the two categorical features i.e. island and sex. We use get_dummies function for it. We do target encoding for the species column. We then seperate the dependent and independent variables. We build a Random Forest Classifier and lastly we dump the model in a pickle file. This is a good practice because if we don't pickle we will have to run the entire model again and again when we change the input features.  
+penguins-app.py  
+We provide a sidebar for taking inputs from the user. The input here is either through a csv file with all the independent features or you can directly use the sliders and the dropdowns. A sample input file is available for download for you to check out. We create a custom function to check if the user uploads anything or not. If nothing is uploaded we provide preset values for each independent feature. We combine the independent feature(either the one provided by the user or the preset values) with the original dataset to make encoding easier. We use the same pre-processing(encoding) steps again.
