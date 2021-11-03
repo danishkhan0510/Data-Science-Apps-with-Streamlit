@@ -4,13 +4,13 @@ Web App creation for your Data Science projects have been made easy with Streaml
 
 ## Project 1
 ### Simple Bioinformatics DNA Count
-Packages used - Pandas, StreamLit, altair(for visualization), PIL(To import jpeg files). \n
+Packages used - Pandas, StreamLit, altair(for visualization), PIL(To import jpeg files).  
 We have the imported logo displayed at the top. Then we have a text area where we put the entire DNA sequence. A sequence has been implicitly provided. You can type your own sequence and hit Ctrl+Enter.
 A dictionary gives you the count of Adenine(A), Thymine(T), Guanine(G), Cytosine(C). This is in the raw dictionary format which may not be readable by the user, so we display the entire strings in the next part. Then we create a data frame with the name and count of each entity which is printed subsequently. In the end we display a count chart for each entity.
 
 ## Project 2
 ### EDA Basketball
-Packages used - Pandas, StreamLit, Matplotlib, Seaborn, Numpy, base64.
+Packages used - Pandas, StreamLit, Matplotlib, Seaborn, Numpy, base64.  
 Note - If an error occures when you run the app for the first time, install 'lxml' package.
 First we perform web scraping to get Player Stats for any chosen year. The data is available here - https://www.basketball-reference.com/.
 We then create a sidebar for customised parameter selection from the user. Year is the first paramater. Selecting Team is another, where we can select all, multiple or a single team. Position is another parameter with functionality similar to team.
@@ -21,7 +21,7 @@ We then create a button which can be pressed to display a heatmap for the correl
 
 ## Project 3
 ### S&P500 Stock Price
-Packages used - Pandas, StreamLit, Matplotlib, Seaborn, base64, yfinance.
+Packages used - Pandas, StreamLit, Matplotlib, Seaborn, base64, yfinance.  
 Data source - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
 First we scrape the table containing information of all S&P companies from the above website. We create a sidebar to select the sector of choice and also the number of companies we would want to visualize. We create a function to directly download the csv file from the web application itself. We use yfinance to download stock price information of companies. Use this link to look at the documentation of yfinance https://pypi.org/project/yfinance/
 We create a custom function to plot the closing price(I used closing price but you can use any other column of choice) of one company.
