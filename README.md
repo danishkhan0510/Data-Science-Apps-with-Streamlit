@@ -10,3 +10,11 @@ A dictionary gives you the count of Adenine(A), Thymine(T), Guanine(G), Cytosine
 
 ## Project 2
 ### EDA Basketball
+Packages used - Pandas, StreamLit, Matplotlib, Seaborn, Numpy, base64.
+Note - If an error occures when you run the app for the first time, install 'lxml' package.
+First we perform web scraping to get Player Stats for any chosen year. The data is available here - https://www.basketball-reference.com/.
+We then create a sidebar for customised parameter selection from the user. Year is the first paramater. Selecting Team is another, where we can select all, multiple or a single team. Position is another parameter with functionality similar to team.
+We filter out the rows for the Team and Position values selected from the sidebar.
+We create a function to directly download the csv file from the web application itself. You can visit the linnk given to know more about how to download file in streamlit.
+https://discuss.streamlit.io/t/how-to-download-file-in-streamlit/1806
+We then create a button which can be pressed to display a heatmap for the correlation of the columns.
