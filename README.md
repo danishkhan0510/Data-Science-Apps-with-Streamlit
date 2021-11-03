@@ -4,7 +4,7 @@ Web App creation for your Data Science projects have been made easy with Streaml
 
 ## Project 1
 ### Simple Bioinformatics DNA Count
-Packages used - Pandas, StreamLit, altair(for visualization), PIL(To import jpeg files)
+Packages used - Pandas, StreamLit, altair(for visualization), PIL(To import jpeg files).
 We have the imported logo displayed at the top. Then we have a text area where we put the entire DNA sequence. A sequence has been implicitly provided. You can type your own sequence and hit Ctrl+Enter.
 A dictionary gives you the count of Adenine(A), Thymine(T), Guanine(G), Cytosine(C). This is in the raw dictionary format which may not be readable by the user, so we display the entire strings in the next part. Then we create a data frame with the name and count of each entity which is printed subsequently. In the end we display a count chart for each entity.
 
@@ -18,3 +18,10 @@ We filter out the rows for the Team and Position values selected from the sideba
 We create a function to directly download the csv file from the web application itself. You can visit the linnk given to know more about how to download file in streamlit.
 https://discuss.streamlit.io/t/how-to-download-file-in-streamlit/1806
 We then create a button which can be pressed to display a heatmap for the correlation of the columns.
+
+## Project 3
+### S&P500 Stock Price
+Packages used - Pandas, StreamLit, Matplotlib, Seaborn, Numpy, base64, yfinance.
+Data source - https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+First we scrape the table containing information of all S&P companies from the above website. We create a sidebar to select the sector of choice and also the number of companies we would want to visualize. We create a function to directly download the csv file from the web application itself. We use yfinance to download stock price information of companies. Use this link to look at the documentation of yfinance https://pypi.org/project/yfinance/
+We create a custom function to plot the closing price(I used closing price but you can use any other column of choice) of one company.
