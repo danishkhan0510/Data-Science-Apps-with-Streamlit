@@ -35,7 +35,7 @@ We start by creating a custom function to input all the 4 independent features f
 
 ## Project 5
 ### Palmer Penguins Classification
-Packages used - Pandas, StreamLit, Sklearn, pickle. 
+Packages used - Pandas, StreamLit, Sklearn, pickle.  
 Data Set - We shall be using the palmer penguins dataset, the goal of which is to provide a great alternative to the iris dataset for data exploration & visualization. The independent features are island, bill length, bill depth, flipper length, body mass and sex. The dependent feature is species. I have uploaded a clean version(missing values removed) of the dataset within the folder for you to use directly.  
 We have 2 files and I will talk about each one of them one by one.  
 **penguins-model-building.py**  
