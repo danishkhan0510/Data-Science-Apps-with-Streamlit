@@ -11,7 +11,7 @@ A dictionary gives you the count of Adenine(A), Thymine(T), Guanine(G), Cytosine
 ## Project 2
 ### EDA Basketball
 Packages used - Pandas, StreamLit, Matplotlib, Seaborn, Numpy, base64.  
-Note - If an error occures when you run the app for the first time, install 'lxml' package.  
+**Note** - If an error occures when you run the app for the first time, install 'lxml' package.  
 Data Source - https://www.basketball-reference.com/  
 First we perform web scraping to get Player Stats for any chosen year.
 We then create a sidebar for customised parameter selection from the user. Year is the first paramater. Selecting Team is another, where we can select all, multiple or a single team. Position is another parameter with functionality similar to team.
@@ -42,3 +42,10 @@ We have 2 files and I will talk about each one of them one by one.
 This is the file where we are building the model. Our first step would be to encode the two categorical features i.e. island and sex. We use get_dummies function for it. We do target encoding for the species column. We then seperate the dependent and independent variables. We build a Random Forest Classifier and lastly we dump the model in a pickle file. This is a good practice because if we don't pickle we will have to run the entire model again and again when we change the input features.  
 **penguins-app.py**  
 We provide a sidebar for taking inputs from the user. The input here is either through a csv file with all the independent features or you can directly use the sliders and the dropdowns. A sample input file is available for download for you to check out. We create a custom function to check if the user uploads anything or not. If nothing is uploaded we provide preset values or take the input directly from the paramters. We combine the independent feature(either the one provided by the user or the preset values) with the original dataset to make encoding easier. We use the same pre-processing(encoding) steps again. We separate out the input row back now and provide it to the pickled model which we have loaded again. We get the prediction and prediction probabilities and print both subsequently.
+
+## Project 6
+### Boston House Price Regression
+Packages used - Pandas, StreamLit, Sklearn, shap(to give you an understanding behind the prediction), matplotlib.  
+Data Set - You can visit here to know about it in detail https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html  
+We first load the inbuilt boston dataset of sklearn and seperate the dependent and independent features. We create a sidebar and provide sliders for each independent feature. The default value for each slider is the mean of that column. We use Random Forest Regressor for our predictions. We use the data frame with all input features for the prediction from our model which we print out. Finally we use the shap library to show the feature importance. We visualize it with two plots.  
+**Note** - We are not pickling the model and loading it here. Each time we run the model when we change the input features. That is why it takes a lot of time to give the predictions as compared to the previous project where loaded the pickled model. 
