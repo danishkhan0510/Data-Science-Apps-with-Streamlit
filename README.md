@@ -46,6 +46,6 @@ We provide a sidebar for taking inputs from the user. The input here is either t
 ## Project 6
 ### Boston House Price Regression
 **Packages** - Pandas, StreamLit, Sklearn, shap(to give you an understanding behind the prediction), matplotlib.  
-**Data Set** - You can visit here to know about it in detail https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html  
+**Data Set** - You can visit here to know about it in detail https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html.  
 We first load the inbuilt boston dataset of sklearn and seperate the dependent and independent features. We create a sidebar and provide sliders for each independent feature. The default value for each slider is the mean of that column. We use Random Forest Regressor for our predictions. We use the data frame with all input features for the prediction from our model which we print out. Finally we use the shap library to show the feature importance. We visualize it with two plots.  
 **Note** - We are not pickling the model and loading it here. Each time we run the model when we change the input features. That is why it takes a lot of time to give the predictions as compared to the previous project where loaded the pickled model. 
